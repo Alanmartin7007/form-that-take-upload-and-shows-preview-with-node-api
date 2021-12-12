@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script type='text/javascript'>
+        function preview_image(event) 
+        {
+         var reader = new FileReader();
+         reader.onload = function()
+         {
+          var output = document.getElementById('output_image');
+          output.src = reader.result;
+         }
+         reader.readAsDataURL(event.target.files[0]);
+        }
+        </script>
+        <style>
+            body
+{
+ width:100%;
+ margin:0 auto;
+ padding:0px;
+ font-family:helvetica;
+ text-align:center;
+ background-color:#61460b;
+}
+#wrapper
+{
+ text-align:center;
+ margin:0 auto;
+ padding:0px;
+ width:995px;
+}
+#output_image
+{
+ max-width:300px;
+}
+</style>
+</head>
+<body>
+    
+    <table >
+        <th>
+    <form>
+        <h1 >
+        UPLOAD THE DETAILS
+        </h1>
+        <div id="wrapper">
+            <h1>Aadghar card front side</h1>
+         <input type="file" accept="image/*" onchange="preview_image(event)">
+         <img id="output_image"/>
+        </th>
+        <tr><td>
+        
+        
+            
+    </form>
+    <tr><td><a href="aadback.html"><button>Go</button></a></td></tr>
+    </table>
+</body>
+</html>

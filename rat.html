@@ -1,0 +1,51 @@
+<html>
+<head>
+ <title>DOCUMENT</title>   
+<script type='text/javascript'>
+function preview_image(event) 
+{
+ var reader = new FileReader();
+ reader.onload = function()
+ {
+  var output = document.getElementById('output_image');
+  output.src = reader.result;
+ }
+ reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+<style>
+body
+{
+ width:100%;
+ margin:0 auto;
+ padding:0px;
+ font-family:helvetica;
+ text-align:center;
+ background-color:#0b0c61;
+}
+#wrapper
+{
+ text-align:center;
+ margin:0 auto;
+ padding:0px;
+ width:995px;
+}
+#output_image
+{
+ max-width:300px;
+}
+</style>
+</head>  
+<body>
+    <h1 >
+        UPLOAD DOCUMENTS
+    </h1
+<div id="wrapper">
+    <h1>Ration card of the recepient</h1>
+ <input type="file" accept="image/*" onchange="preview_image(event)">
+ <img id="output_image"/>
+</form>
+<tr><td><a href="submit.html"><button>Go</button></a></td></tr>
+</table>
+</body>
+</html>
